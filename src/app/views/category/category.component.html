@@ -1,9 +1,9 @@
 <section>
   <div class="title">
-    <h1>Cardápio</h1>
+    <h1>{{ category?.name }}</h1>
   </div>
   <div class="card">
-    <app-card *ngFor="let category of categories" [categoryData]="category" [routerLink]="['/category', category.id]"></app-card>
+    <app-card *ngFor="let burger of burgers" [categoryData]="burger" [routerLink]="['/burgers', burger.id]"></app-card>
   </div>
   <div>
     <app-button label="Ver Cardápio Completo" styleClass="primaryBtn uppercase" routerLink="/menu"></app-button>

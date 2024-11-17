@@ -4,11 +4,12 @@ import { ButtonComponent } from '../../components/button/button.component';
 import { CategoryInterface } from '../../interfaces/category-interface';
 import { BurgersService } from '../../services/burgers.service';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [CardComponent, ButtonComponent, CommonModule],
+  imports: [CardComponent, ButtonComponent, CommonModule, RouterModule],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css',
 })

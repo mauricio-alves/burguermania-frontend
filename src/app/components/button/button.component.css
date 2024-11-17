@@ -35,3 +35,7 @@
   border: 1px solid var(--secondary-color);
   color: var(--background-color);
 }
+
+.uppercase {
+  text-transform: uppercase;
+}

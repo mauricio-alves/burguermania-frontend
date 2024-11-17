@@ -16,6 +16,13 @@ export class BurgersService {
     return data.json();
   }
 
+  // Retorna uma categoria específica
+  async getCategory(id: number): Promise<CategoryInterface> {
+    const response = await fetch(`${this.url}/categories?id=${id}`);
+    const data: CategoryInterface[] = await response.json();
+    return data[0];
+  }
+
   // Retorna todos os hamburgueres de uma categoria específica
   async getBurgers(id: number): Promise<BurgerInterface[]> {
     const data = await fetch(`${this.url}/burgers?categoryId=${id}`);
@@ -24,7 +31,8 @@ export class BurgersService {
 
   // Retorna um hamburguer específico
   async getBurger(id: number): Promise<BurgerInterface> {
-    const data = await fetch(`${this.url}/burgers?id=${id}`);
-    return data.json();
+    const response = await fetch(`${this.url}/burgers?id=${id}`);
+    const data: BurgerInterface[] = await response.json();
+    return data[0];
   }
 }
