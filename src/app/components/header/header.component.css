@@ -4,22 +4,43 @@ header div {
   justify-content: space-around;
   align-items: center;
   background-color: var(--background-color);
-  color: var(--primary-color);
   padding: 20px 0;
 }
 
-header img {
-  max-width: 150px;
+.logo {
+  cursor: pointer;
 }
 
-header h1 {
-  font-size: 1.5rem;
+.list ul {
   display: flex;
-  align-items: baseline;
-  align-self: center;
-  justify-content: center;
-  text-align: center;
-  margin: 0;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+
+.list ul li {
+  font-weight: 500;
+  font-size: 23px;
+  list-style: none;
+}
+
+.list ul a {
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.link {
+  color: var(--primary-color);
+  transition: 0.4s ease-in-out;
+}
+
+.link:hover {
+  color: var(--background-color);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: 0.4s ease-in-out;
 }
 
 /* --------------  MEDIA QUERY ----------------  */

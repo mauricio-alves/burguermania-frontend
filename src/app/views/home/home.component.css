@@ -1,0 +1,16 @@
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  justify-content: center;
+  padding: 20px 30px;
+}
+
+.btns {
+  display: flex;
+  gap: 2rem;
+}
+
+/* --------------  MEDIA QUERIES ----------------  */
+@media (max-width: 751px) {}

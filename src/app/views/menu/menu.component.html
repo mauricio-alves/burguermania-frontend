@@ -1,0 +1,11 @@
+<section>
+  <div class="title">
+    <h1>Cardápio</h1>
+  </div>
+  <div class="card">
+    <app-card *ngFor="let category of categories" [categoryData]="category"></app-card>
+  </div>
+  <div>
+    <app-button label="Ver Cardápio Completo" styleClass="primaryBtn"></app-button>
+  </div>
+</section>
