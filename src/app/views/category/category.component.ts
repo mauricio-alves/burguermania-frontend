@@ -3,10 +3,9 @@ import { CardComponent } from '../../components/card/card.component';
 import { ButtonComponent } from '../../components/button/button.component';
 import { BurgersService } from '../../services/burgers.service';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
 import { BurgerInterface } from '../../interfaces/burger-interface';
 import { CategoryInterface } from '../../interfaces/category-interface';
-import { RouterModule } from '@angular/router';
+import { RouterModule, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-category',
@@ -17,9 +16,24 @@ import { RouterModule } from '@angular/router';
 })
 export class CategoryComponent {
   burgers: BurgerInterface[] = [];
+  displayedBurgers: BurgerInterface[] = [];
+  remainingBurgers: BurgerInterface[] = [];
   category: CategoryInterface | undefined;
   route: ActivatedRoute = inject(ActivatedRoute);
   burgersService: BurgersService = inject(BurgersService);
+
+  // Controla o estado da exibição das categorias
+  showAll = false;
+
+  // Função para exibir todas as categorias
+  showFullMenu() {
+    this.showAll = true;
+  }
+
+  // Voltar a exibir apenas as 3 primeiras categorias
+  showLess() {
+    this.showAll = false;
+  }
 
   constructor() {
     // Obtém o id da categoria da URL
@@ -28,6 +42,9 @@ export class CategoryComponent {
     // Obtém os hamburgueres da categoria
     this.burgersService.getBurgers(id).then((burgers) => {
       this.burgers = burgers;
+      // Atualizar as categorias exibidas e restantes
+      this.displayedBurgers = this.burgers.slice(0, 3);
+      this.remainingBurgers = this.burgers.slice(3);
     });
 
     // Obtém os detalhes da categoria

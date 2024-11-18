@@ -20,6 +20,20 @@
       "image": "assets/images/image4.png",
       "ingredients": "Pão, hambúrguer, alface, tomate, queijo e maionese.",
       "description": "Um sanduíche irresistível e indulgente para os amantes de sabores intensos. Composto por um hambúrguer suculento de 200g de carne bovina Angus, envolto em uma crosta de bacon crocante e coberto com uma generosa porção de queijo cheddar derretido. Servido em um pão brioche amanteigado, o recheio inclui cebolas fritas crocantes, fatias de tomate, alface americana, molho especial à base de maionese e alho, e um toque extra de ketchup e mostarda. Para finalizar, uma camada de pulled pork desfiado e uma pitada de páprica picante, garantindo uma explosão de sabores a cada mordida."
+    },
+    {
+      "id": "4",
+      "name": "X-Gourmet",
+      "image": "assets/images/image4.png",
+      "ingredients": "Pão, hambúrguer, alface, tomate, queijo e maionese.",
+      "description": "Uma experiência gastronômica sofisticada, criada para paladares exigentes. O hambúrguer trufado, preparado com carne Angus suculenta, é coroado com queijo brie derretido e cogumelos trufados, realçando a complexidade dos sabores. Servido em um pão brioche artesanal, ele é complementado por rúcula fresca e uma maionese artesanal levemente cítrica. Cada mordida é um convite a saborear a combinação perfeita entre ingredientes premium e texturas envolventes, fazendo do X-Gourmet uma escolha inesquecível."
+    },
+    {
+      "id": "5",
+      "name": "X-Clássicos",
+      "image": "assets/images/image4.png",
+      "ingredients": "Pão, hambúrguer, alface, tomate, queijo e maionese.",
+      "description": "Uma celebração aos sabores que nunca saem de moda. O Cheeseburger Tradicional, com hambúrguer grelhado no ponto perfeito, é acompanhado por queijo cheddar derretido, alface fresca e tomate suculento, tudo dentro de um pão macio. Para os amantes de bacon, o X-Bacon entrega o crocante irresistível junto com molho barbecue. Já o X-Egg adiciona o toque especial do ovo frito com gema cremosa. Simples e deliciosos, os clássicos oferecem conforto e sabor em cada mordida."
     }
   ],
   "burgers": [
@@ -45,6 +59,15 @@
       "id": "3",
       "categoryId": 1,
       "name": "X-Frutas",
+      "image": "assets/images/image4.png",
+      "ingredients": "Pão, hambúrguer, alface, tomate, queijo e maionese.",
+      "description": "Um hambúrguer vegano suculento feito com uma base de grão-de-bico e quinoa, temperado com especiarias defumadas, cebola caramelizada e alho, garantindo uma textura rica e saborosa. Servido em um pão macio, ele vem acompanhado de fatias frescas de tomate, alface crocante, picles, abacate cremoso e uma generosa camada de maionese de ervas vegana. Finalizado com molho barbecue agridoce e uma pitada de pimenta-do-reino moída na hora, proporcionando uma combinação deliciosa de sabores e texturas em cada mordida.",
+      "price": 49.99
+    },
+    {
+      "id": "16",
+      "categoryId": 1,
+      "name": "X-Salada",
       "image": "assets/images/image4.png",
       "ingredients": "Pão, hambúrguer, alface, tomate, queijo e maionese.",
       "description": "Um hambúrguer vegano suculento feito com uma base de grão-de-bico e quinoa, temperado com especiarias defumadas, cebola caramelizada e alho, garantindo uma textura rica e saborosa. Servido em um pão macio, ele vem acompanhado de fatias frescas de tomate, alface crocante, picles, abacate cremoso e uma generosa camada de maionese de ervas vegana. Finalizado com molho barbecue agridoce e uma pitada de pimenta-do-reino moída na hora, proporcionando uma combinação deliciosa de sabores e texturas em cada mordida.",
@@ -78,6 +101,15 @@
       "price": 49.99
     },
     {
+      "id": "17",
+      "categoryId": 2,
+      "name": "X-Light",
+      "image": "assets/images/image4.png",
+      "ingredients": "Pão, hambúrguer, alface, tomate, queijo e maionese.",
+      "description": "Um hambúrguer vegano suculento feito com uma base de grão-de-bico e quinoa, temperado com especiarias defumadas, cebola caramelizada e alho, garantindo uma textura rica e saborosa. Servido em um pão macio, ele vem acompanhado de fatias frescas de tomate, alface crocante, picles, abacate cremoso e uma generosa camada de maionese de ervas vegana. Finalizado com molho barbecue agridoce e uma pitada de pimenta-do-reino moída na hora, proporcionando uma combinação deliciosa de sabores e texturas em cada mordida.",
+      "price": 49.99
+    },
+    {
       "id": "7",
       "categoryId": 3,
       "name": "X-Mega-Bacon",
@@ -102,6 +134,87 @@
       "image": "assets/images/image4.png",
       "ingredients": "Pão, hambúrguer, alface, tomate, queijo e maionese.",
       "description": "Um sanduíche irresistível e indulgente para os amantes de sabores intensos. Composto por um hambúrguer suculento de 200g de carne bovina Angus, envolto em uma crosta de bacon crocante e coberto com uma generosa porção de queijo cheddar derretido. Servido em um pão brioche amanteigado, o recheio inclui cebolas fritas crocantes, fatias de tomate, alface americana, molho especial à base de maionese e alho, e um toque extra de ketchup e mostarda. Para finalizar, uma camada de pulled pork desfiado e uma pitada de páprica picante, garantindo uma explosão de sabores a cada mordida.",
+      "price": 49.99
+    },
+    {
+      "id": "18",
+      "categoryId": 3,
+      "name": "X-Triplo",
+      "image": "assets/images/image4.png",
+      "ingredients": "Pão, hambúrguer, alface, tomate, queijo e maionese.",
+      "description": "Um hambúrguer vegano suculento feito com uma base de grão-de-bico e quinoa, temperado com especiarias defumadas, cebola caramelizada e alho, garantindo uma textura rica e saborosa. Servido em um pão macio, ele vem acompanhado de fatias frescas de tomate, alface crocante, picles, abacate cremoso e uma generosa camada de maionese de ervas vegana. Finalizado com molho barbecue agridoce e uma pitada de pimenta-do-reino moída na hora, proporcionando uma combinação deliciosa de sabores e texturas em cada mordida.",
+      "price": 49.99
+    },
+    {
+      "id": "10",
+      "categoryId": 4,
+      "name": "Trufado Supreme",
+      "image": "assets/images/image4.png",
+      "ingredients": "Pão, hambúrguer, alface, tomate, queijo e maionese.",
+      "description": "Um sanduíche irresistível e indulgente para os amantes de sabores intensos. Composto por um hambúrguer suculento de 200g de carne bovina Angus, envolto em uma crosta de bacon crocante e coberto com uma generosa porção de queijo cheddar derretido. Servido em um pão brioche amanteigado, o recheio inclui cebolas fritas crocantes, fatias de tomate, alface americana, molho especial à base de maionese e alho, e um toque extra de ketchup e mostarda. Para finalizar, uma camada de pulled pork desfiado e uma pitada de páprica picante, garantindo uma explosão de sabores a cada mordida.",
+      "price": 59.99
+    },
+    {
+      "id": "11",
+      "categoryId": 4,
+      "name": "Blue Cheese Delight",
+      "image": "assets/images/image4.png",
+      "ingredients": "Pão, hambúrguer, alface, tomate, queijo e maionese.",
+      "description": "Um sanduíche irresistível e indulgente para os amantes de sabores intensos. Composto por um hambúrguer suculento de 200g de carne bovina Angus, envolto em uma crosta de bacon crocante e coberto com uma generosa porção de queijo cheddar derretido. Servido em um pão brioche amanteigado, o recheio inclui cebolas fritas crocantes, fatias de tomate, alface americana, molho especial à base de maionese e alho, e um toque extra de ketchup e mostarda. Para finalizar, uma camada de pulled pork desfiado e uma pitada de páprica picante, garantindo uma explosão de sabores a cada mordida.",
+      "price": 69.99
+    },
+    {
+      "id": "12",
+      "categoryId": 4,
+      "name": "Mediterrâneo",
+      "image": "assets/images/image4.png",
+      "ingredients": "Pão, hambúrguer, alface, tomate, queijo e maionese.",
+      "description": "Um sanduíche irresistível e indulgente para os amantes de sabores intensos. Composto por um hambúrguer suculento de 200g de carne bovina Angus, envolto em uma crosta de bacon crocante e coberto com uma generosa porção de queijo cheddar derretido. Servido em um pão brioche amanteigado, o recheio inclui cebolas fritas crocantes, fatias de tomate, alface americana, molho especial à base de maionese e alho, e um toque extra de ketchup e mostarda. Para finalizar, uma camada de pulled pork desfiado e uma pitada de páprica picante, garantindo uma explosão de sabores a cada mordida.",
+      "price": 79.99
+    },
+    {
+      "id": "19",
+      "categoryId": 4,
+      "name": "X-Deluxe",
+      "image": "assets/images/image4.png",
+      "ingredients": "Pão, hambúrguer, alface, tomate, queijo e maionese.",
+      "description": "Um hambúrguer vegano suculento feito com uma base de grão-de-bico e quinoa, temperado com especiarias defumadas, cebola caramelizada e alho, garantindo uma textura rica e saborosa. Servido em um pão macio, ele vem acompanhado de fatias frescas de tomate, alface crocante, picles, abacate cremoso e uma generosa camada de maionese de ervas vegana. Finalizado com molho barbecue agridoce e uma pitada de pimenta-do-reino moída na hora, proporcionando uma combinação deliciosa de sabores e texturas em cada mordida.",
+      "price": 49.99
+    },
+    {
+      "id": "13",
+      "categoryId": 5,
+      "name": "Cheeseburger Tradicional",
+      "image": "assets/images/image4.png",
+      "ingredients": "Pão, hambúrguer, alface, tomate, queijo e maionese.",
+      "description": "Um sanduíche irresistível e indulgente para os amantes de sabores intensos. Composto por um hambúrguer suculento de 200g de carne bovina Angus, envolto em uma crosta de bacon crocante e coberto com uma generosa porção de queijo cheddar derretido. Servido em um pão brioche amanteigado, o recheio inclui cebolas fritas crocantes, fatias de tomate, alface americana, molho especial à base de maionese e alho, e um toque extra de ketchup e mostarda. Para finalizar, uma camada de pulled pork desfiado e uma pitada de páprica picante, garantindo uma explosão de sabores a cada mordida.",
+      "price": 29.99
+    },
+    {
+      "id": "14",
+      "categoryId": 5,
+      "name": "X-Bacon",
+      "image": "assets/images/image4.png",
+      "ingredients": "Pão, hambúrguer, alface, tomate, queijo e maionese.",
+      "description": "Um sanduíche irresistível e indulgente para os amantes de sabores intensos. Composto por um hambúrguer suculento de 200g de carne bovina Angus, envolto em uma crosta de bacon crocante e coberto com uma generosa porção de queijo cheddar derretido. Servido em um pão brioche amanteigado, o recheio inclui cebolas fritas crocantes, fatias de tomate, alface americana, molho especial à base de maionese e alho, e um toque extra de ketchup e mostarda. Para finalizar, uma camada de pulled pork desfiado e uma pitada de páprica picante, garantindo uma explosão de sabores a cada mordida.",
+      "price": 39.99
+    },
+    {
+      "id": "15",
+      "categoryId": 5,
+      "name": "X-Egg",
+      "image": "assets/images/image4.png",
+      "ingredients": "Pão, hambúrguer, alface, tomate, queijo e maionese.",
+      "description": "Um sanduíche irresistível e indulgente para os amantes de sabores intensos. Composto por um hambúrguer suculento de 200g de carne bovina Angus, envolto em uma crosta de bacon crocante e coberto com uma generosa porção de queijo cheddar derretido. Servido em um pão brioche amanteigado, o recheio inclui cebolas fritas crocantes, fatias de tomate, alface americana, molho especial à base de maionese e alho, e um toque extra de ketchup e mostarda. Para finalizar, uma camada de pulled pork desfiado e uma pitada de páprica picante, garantindo uma explosão de sabores a cada mordida.",
+      "price": 49.99
+    },
+    {
+      "id": "20",
+      "categoryId": 5,
+      "name": "X-Tudo",
+      "image": "assets/images/image4.png",
+      "ingredients": "Pão, hambúrguer, alface, tomate, queijo e maionese.",
+      "description": "Um hambúrguer vegano suculento feito com uma base de grão-de-bico e quinoa, temperado com especiarias defumadas, cebola caramelizada e alho, garantindo uma textura rica e saborosa. Servido em um pão macio, ele vem acompanhado de fatias frescas de tomate, alface crocante, picles, abacate cremoso e uma generosa camada de maionese de ervas vegana. Finalizado com molho barbecue agridoce e uma pitada de pimenta-do-reino moída na hora, proporcionando uma combinação deliciosa de sabores e texturas em cada mordida.",
       "price": 49.99
     }
   ],
@@ -153,6 +266,18 @@
         "quantity": 3
       },
       "observation": "asdasdasda"
+    },
+    {
+      "id": "199",
+      "burger1": {
+        "name": "x-tomate",
+        "quantity": 1
+      },
+      "burger2": {
+        "name": "x-alface-premium",
+        "quantity": 2
+      },
+      "observation": "sem cebola e sem molho"
     }
   ]
 }

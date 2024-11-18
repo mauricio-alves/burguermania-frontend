@@ -61,7 +61,6 @@ export class InputComponent {
         id: randomId,
         ...this.burgerForm.value,
       };
-      console.log(this.formValues);
       this.burgersService.createOrder(this.formValues);
       this.toast.success('Pedido criado com sucesso');
       this.formValues = {} as OrderInterface;

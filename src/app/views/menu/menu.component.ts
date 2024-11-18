@@ -15,11 +15,29 @@ import { RouterModule } from '@angular/router';
 })
 export class MenuComponent {
   categories: CategoryInterface[] = [];
+  displayedCategories: CategoryInterface[] = [];
+  remainingCategories: CategoryInterface[] = [];
   burgersService: BurgersService = inject(BurgersService);
+
+  // Controla o estado da exibição das categorias
+  showAll = false;
+
+  // Função para exibir todas as categorias
+  showFullMenu() {
+    this.showAll = true;
+  }
+
+  // Voltar a exibir apenas as 3 primeiras categorias
+  showLess() {
+    this.showAll = false;
+  }
 
   constructor() {
     this.burgersService.getCategories().then((categories) => {
       this.categories = categories;
+      // Atualizar as categorias exibidas e restantes
+      this.displayedCategories = this.categories.slice(0, 3);
+      this.remainingCategories = this.categories.slice(3);
     });
   }
 }

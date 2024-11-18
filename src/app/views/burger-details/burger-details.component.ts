@@ -1,9 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { BurgersService } from '../../services/burgers.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { BurgerInterface } from '../../interfaces/burger-interface';
-import { RouterModule } from '@angular/router';
-import { DescriptionComponent } from "../../components/description/description.component";
+import { DescriptionComponent } from '../../components/description/description.component';
 
 @Component({
   selector: 'app-burger-details',

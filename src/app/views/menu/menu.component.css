@@ -1,7 +1,9 @@
 section .card {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  flex-wrap: wrap;
+  gap: 0 3rem;
+  justify-content: center;
 }
 
 .title {
