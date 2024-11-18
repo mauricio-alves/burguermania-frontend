@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { CategoryInterface } from '../interfaces/category-interface';
 import { BurgerInterface } from '../interfaces/burger-interface';
+import { OrderInterface } from '../interfaces/order-interface';
 
 @Injectable({
   providedIn: 'root',
@@ -34,5 +35,16 @@ export class BurgersService {
     const response = await fetch(`${this.url}/burgers?id=${id}`);
     const data: BurgerInterface[] = await response.json();
     return data[0];
+  }
+
+  // Cria um novo pedido
+  async createOrder(order: OrderInterface): Promise<void> {
+    await fetch(`${this.url}/orders`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(order),
+    });
   }
 }

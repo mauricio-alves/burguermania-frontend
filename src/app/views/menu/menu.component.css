@@ -9,3 +9,8 @@ section .card {
   text-transform: uppercase;
   font-size: 30px;
 }
+
+.title h1 {
+  margin: 0;
+  font-weight: 500;
+}

@@ -7,10 +7,11 @@
 }
 
 :root {
-  --primary-color: #521D16;
-  --secondary-color: #ED0000;
+  --primary-color: #521d16;
+  --secondary-color: #ed0000;
   --background-color: #fff;
   --text-color: #000;
+  --border-color: #f0f0f0;
 }
 
 body {

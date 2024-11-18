@@ -1,21 +1,21 @@
 {
   "categories": [
     {
-      "id": 1,
+      "id": "1",
       "name": "X-Vegan",
       "image": "assets/images/image4.png",
       "ingredients": "Pão, hambúrguer, alface, tomate, queijo e maionese.",
       "description": "Um hambúrguer vegano suculento feito com uma base de grão-de-bico e quinoa, temperado com especiarias defumadas, cebola caramelizada e alho, garantindo uma textura rica e saborosa. Servido em um pão macio, ele vem acompanhado de fatias frescas de tomate, alface crocante, picles, abacate cremoso e uma generosa camada de maionese de ervas vegana. Finalizado com molho barbecue agridoce e uma pitada de pimenta-do-reino moída na hora, proporcionando uma combinação deliciosa de sabores e texturas em cada mordida."
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "X-Fitness",
       "image": "assets/images/image4.png",
       "ingredients": "Pão, hambúrguer, alface, tomate, queijo e maionese.",
       "description": "Um sanduíche leve e nutritivo, perfeito para quem busca energia e sabor. Feito com um hambúrguer grelhado de peito de frango temperado com ervas finas e cúrcuma, servido em um pão integral artesanal. Acompanhado de folhas frescas de rúcula, espinafre e brotos de alfafa, além de rodelas crocantes de pepino, fatias finas de cenoura e uma pasta de iogurte grego com hortelã. Finalizado com um toque de azeite extravirgem e sementes de chia, proporcionando uma refeição equilibrada, repleta de texturas frescas e saudáveis."
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "X-Infarto",
       "image": "assets/images/image4.png",
       "ingredients": "Pão, hambúrguer, alface, tomate, queijo e maionese.",
@@ -24,7 +24,7 @@
   ],
   "burgers": [
     {
-      "id": 1,
+      "id": "1",
       "categoryId": 1,
       "name": "X-Alface-Premium",
       "image": "assets/images/image4.png",
@@ -33,7 +33,7 @@
       "price": 29.99
     },
     {
-      "id": 2,
+      "id": "2",
       "categoryId": 1,
       "name": "X-Tomate",
       "image": "assets/images/image4.png",
@@ -42,7 +42,7 @@
       "price": 39.99
     },
     {
-      "id": 3,
+      "id": "3",
       "categoryId": 1,
       "name": "X-Frutas",
       "image": "assets/images/image4.png",
@@ -51,7 +51,7 @@
       "price": 49.99
     },
     {
-      "id": 4,
+      "id": "4",
       "categoryId": 2,
       "name": "X-Fitness-Grelhado",
       "image": "assets/images/image4.png",
@@ -60,7 +60,7 @@
       "price": 29.99
     },
     {
-      "id": 5,
+      "id": "5",
       "categoryId": 2,
       "name": "X-Proteína",
       "image": "assets/images/image4.png",
@@ -69,7 +69,7 @@
       "price": 39.99
     },
     {
-      "id": 6,
+      "id": "6",
       "categoryId": 2,
       "name": "X-Low-Carb",
       "image": "assets/images/image4.png",
@@ -78,7 +78,7 @@
       "price": 49.99
     },
     {
-      "id": 7,
+      "id": "7",
       "categoryId": 3,
       "name": "X-Mega-Bacon",
       "image": "assets/images/image4.png",
@@ -87,7 +87,7 @@
       "price": 29.99
     },
     {
-      "id": 8,
+      "id": "8",
       "categoryId": 3,
       "name": "X-Parada-Cardíaca",
       "image": "assets/images/image4.png",
@@ -96,13 +96,63 @@
       "price": 39.99
     },
     {
-      "id": 9,
+      "id": "9",
       "categoryId": 3,
       "name": "X-Queijo-Extra",
       "image": "assets/images/image4.png",
       "ingredients": "Pão, hambúrguer, alface, tomate, queijo e maionese.",
       "description": "Um sanduíche irresistível e indulgente para os amantes de sabores intensos. Composto por um hambúrguer suculento de 200g de carne bovina Angus, envolto em uma crosta de bacon crocante e coberto com uma generosa porção de queijo cheddar derretido. Servido em um pão brioche amanteigado, o recheio inclui cebolas fritas crocantes, fatias de tomate, alface americana, molho especial à base de maionese e alho, e um toque extra de ketchup e mostarda. Para finalizar, uma camada de pulled pork desfiado e uma pitada de páprica picante, garantindo uma explosão de sabores a cada mordida.",
       "price": 49.99
+    }
+  ],
+  "orders": [
+    {
+      "id": "112",
+      "burger1": {
+        "name": "X-Proteína",
+        "quantity": 2
+      },
+      "burger2": {
+        "name": "X-Alface-Premium",
+        "quantity": 3
+      },
+      "observation": "Sem molho"
+    },
+    {
+      "id": "112",
+      "burger1": {
+        "name": "X-Proteína",
+        "quantity": 2
+      },
+      "burger2": {
+        "name": "X-Alface-Premium",
+        "quantity": 3
+      },
+      "observation": "Sem molho"
+    },
+    {
+      "id": "11122",
+      "burger1": {
+        "name": "X-Proteína",
+        "quantity": 2
+      },
+      "burger2": {
+        "name": "X-Alface-Premium",
+        "quantity": 3
+      },
+      "observation": "Sem molho"
+    },
+    {
+      "id": "228",
+      "burger1": {
+        "name": "aaa",
+        "quantity": 2
+      },
+      "burger2": {
+        "name": "bbb",
+        "quantity": 3
+      },
+      "observation": "asdasdasda"
     }
   ]
 }
