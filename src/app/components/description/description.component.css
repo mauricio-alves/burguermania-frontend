@@ -1,7 +1,7 @@
-section .card {
+section .description {
   display: flex;
   flex-direction: row;
-  gap: 10rem;
+  gap: 8rem;
   justify-content: center;
   text-align: center;
 }
@@ -43,4 +43,28 @@ section .card {
   padding-top: 30px;
   text-align: justify;
   margin: 0;
+}
+
+/* --------------  MEDIA QUERIES ----------------  */
+@media (max-width: 1200px) {
+  section .description {
+    gap: 5rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  section .description {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 850px) {
+  section .description {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .ingredients {
+    text-align: center;
+  }
 }

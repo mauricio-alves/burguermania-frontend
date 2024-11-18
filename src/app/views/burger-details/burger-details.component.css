@@ -1,14 +1,2 @@
-section {
-  gap: 2rem;
-}
 
-.title {
-  color: var(--secondary-color);
-  text-transform: uppercase;
-  font-size: 30px;
-}
 
-.title h1 {
-  margin: 0;
-  font-weight: 500;
-}

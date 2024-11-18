@@ -11,7 +11,7 @@
   --secondary-color: #ed0000;
   --background-color: #fff;
   --text-color: #000;
-  --border-color: #f0f0f0;
+  --border-color: #d3d3d3;
 }
 
 body {
@@ -33,4 +33,23 @@ section {
   padding: 20px 30px;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+section .card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0 3rem;
+  justify-content: center;
+}
+
+.title {
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.title h1 {
+  margin: 0;
+  font-weight: 500;
 }
