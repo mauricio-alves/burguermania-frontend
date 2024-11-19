@@ -278,6 +278,18 @@
         "quantity": 2
       },
       "observation": "sem cebola e sem molho"
+    },
+    {
+      "id": "37",
+      "burger1": {
+        "name": "x-salada",
+        "quantity": 2
+      },
+      "burger2": {
+        "name": "x-tudo",
+        "quantity": 1
+      },
+      "observation": "sem cebola"
     }
   ]
 }

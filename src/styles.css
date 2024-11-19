@@ -12,6 +12,8 @@
   --background-color: #fff;
   --text-color: #000;
   --border-color: #d3d3d3;
+  --modalBg-color: rgba(255, 255, 255, 0.8);
+  --modalBack-color: rgba(82, 29, 22, 0.5);
 }
 
 body {
