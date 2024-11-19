@@ -18,8 +18,6 @@ export class MenuComponent {
   displayedCategories: CategoryInterface[] = [];
   remainingCategories: CategoryInterface[] = [];
   burgersService: BurgersService = inject(BurgersService);
-
-  // Controla o estado da exibição das categorias
   showAll = false;
 
   // Função para exibir todas as categorias

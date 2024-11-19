@@ -42,17 +42,23 @@ export class InputComponent {
     this.burgerForm = this.formBuilder.group({
       burger1: this.formBuilder.group({
         name: ['', Validators.required],
-        quantity: ['', [Validators.min(1), Validators.required]],
+        quantity: [
+          '',
+          [Validators.min(1), Validators.max(99), Validators.required],
+        ],
       }),
       burger2: this.formBuilder.group({
         name: ['', Validators.required],
-        quantity: ['', [Validators.min(1), Validators.required]],
+        quantity: [
+          '',
+          [Validators.min(1), Validators.max(99), Validators.required],
+        ],
       }),
       observation: ['', Validators.required],
     });
   }
 
-  // Função para criar um novo pedido
+  // Função para criar um novo pedido, exibir um toast de sucesso ou erro e limpar o formulário
   createOrder(): void {
     const randomId = Math.floor(Math.random() * 1000).toString();
 
@@ -67,6 +73,7 @@ export class InputComponent {
       this.burgerForm.reset();
     } else {
       this.toast.error('Formulário inválido');
+      this.burgerForm.reset();
     }
   }
 }
