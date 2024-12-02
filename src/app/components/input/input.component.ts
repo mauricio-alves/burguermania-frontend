@@ -12,7 +12,7 @@ import { OrderInterface } from '../../interfaces/order-interface';
 import { HotToastService } from '@ngxpert/hot-toast';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../../components/button/button.component';
-import { BurgersService } from '../../services/burgers.service';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-input',
@@ -32,7 +32,7 @@ export class InputComponent {
   private toast: HotToastService = inject(HotToastService);
   burgerForm: FormGroup;
   formValues: OrderInterface;
-  burgersService: BurgersService = inject(BurgersService);
+  apiService: ApiService = inject(ApiService);
 
   constructor(private formBuilder: FormBuilder) {
     // Inicializa o formulário
@@ -67,7 +67,7 @@ export class InputComponent {
         id: randomId,
         ...this.burgerForm.value,
       };
-      this.burgersService.createOrder(this.formValues);
+      // this.burgersService.createOrder(this.formValues);
       this.toast.success('Pedido criado com sucesso');
       this.formValues = {} as OrderInterface;
       this.burgerForm.reset();

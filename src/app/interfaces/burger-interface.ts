@@ -1,9 +1,9 @@
 export interface BurgerInterface {
-  id: string;
+  id: number;
   categoryId: number;
   name: string;
-  image: string;
-  ingredients: string;
-  description: string;
+  pathImage: string;
+  baseDescription: string;
+  fullDescription: string;
   price: number;
 }

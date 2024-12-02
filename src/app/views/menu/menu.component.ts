@@ -1,8 +1,8 @@
-import { Component, inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CardComponent } from '../../components/card/card.component';
 import { ButtonComponent } from '../../components/button/button.component';
 import { CategoryInterface } from '../../interfaces/category-interface';
-import { BurgersService } from '../../services/burgers.service';
+import { ApiService } from '../../services/api.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
@@ -13,11 +13,10 @@ import { RouterModule } from '@angular/router';
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css',
 })
-export class MenuComponent {
+export class MenuComponent implements OnInit {
   categories: CategoryInterface[] = [];
   displayedCategories: CategoryInterface[] = [];
   remainingCategories: CategoryInterface[] = [];
-  burgersService: BurgersService = inject(BurgersService);
   showAll = false;
 
   // Função para exibir todas as categorias
@@ -30,8 +29,11 @@ export class MenuComponent {
     this.showAll = false;
   }
 
-  constructor() {
-    this.burgersService.getCategories().then((categories) => {
+  constructor(private apiService: ApiService) {}
+
+  ngOnInit(): void {
+    // Obtém todas as categorias
+    this.apiService.getCategories().subscribe((categories) => {
       this.categories = categories;
       // Atualizar as categorias exibidas e restantes
       this.displayedCategories = this.categories.slice(0, 3);

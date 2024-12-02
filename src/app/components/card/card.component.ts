@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CategoryInterface } from '../../interfaces/category-interface';
+import { BurgerInterface } from '../../interfaces/burger-interface';
 
 @Component({
   selector: 'app-card',
@@ -10,4 +11,5 @@ import { CategoryInterface } from '../../interfaces/category-interface';
 })
 export class CardComponent {
   @Input() categoryData!: CategoryInterface;
+  @Input() burgerData!: BurgerInterface;
 }

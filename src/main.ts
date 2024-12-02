@@ -2,10 +2,15 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
 import { provideHotToastConfig } from '@ngxpert/hot-toast';
+import { provideHttpClient } from '@angular/common/http';
 
 bootstrapApplication(AppComponent, {
   // Configuração do HotToast para a aplicação inteira (global)
-  providers: [provideHotToastConfig(), ...appConfig.providers],
+  providers: [
+    provideHotToastConfig(),
+    provideHttpClient(),
+    ...appConfig.providers,
+  ],
 })
   .then(() => {
     console.log('Aplicação inicializada com sucesso!');

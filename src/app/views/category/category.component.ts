@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CardComponent } from '../../components/card/card.component';
 import { ButtonComponent } from '../../components/button/button.component';
-import { BurgersService } from '../../services/burgers.service';
+import { ApiService } from '../../services/api.service';
 import { CommonModule } from '@angular/common';
 import { BurgerInterface } from '../../interfaces/burger-interface';
 import { CategoryInterface } from '../../interfaces/category-interface';
@@ -20,7 +20,6 @@ export class CategoryComponent {
   remainingBurgers: BurgerInterface[] = [];
   category: CategoryInterface | undefined;
   route: ActivatedRoute = inject(ActivatedRoute);
-  burgersService: BurgersService = inject(BurgersService);
   showAll = false;
 
   // Função para exibir todas as categorias
@@ -33,21 +32,19 @@ export class CategoryComponent {
     this.showAll = false;
   }
 
-  constructor() {
+  constructor(private apiService: ApiService) {
     // Obtém o id da categoria da URL
     const id = Number(this.route.snapshot.params['id']);
 
     // Obtém os hamburgueres da categoria
-    this.burgersService.getBurgers(id).then((burgers) => {
-      this.burgers = burgers;
-      // Atualizar as categorias exibidas e restantes
-      this.displayedBurgers = this.burgers.slice(0, 3);
-      this.remainingBurgers = this.burgers.slice(3);
-    });
-
-    // Obtém os detalhes da categoria
-    this.burgersService.getCategory(id).then((category) => {
-      this.category = category;
+    this.apiService.getCategoryById(id).subscribe((category) => {
+      if (category) {
+        this.category = category;
+        this.burgers = category.products;
+        // Atualizar os hamburgueres exibidos e restantes
+        this.displayedBurgers = this.burgers.slice(0, 3);
+        this.remainingBurgers = this.burgers.slice(3);
+      }
     });
   }
 }

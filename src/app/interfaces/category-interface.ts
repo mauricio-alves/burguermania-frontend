@@ -1,7 +1,10 @@
+import { BurgerInterface } from './burger-interface';
+
 export interface CategoryInterface {
-  id: string;
+  id: number;
   name: string;
-  image: string;
-  ingredients: string;
-  description: string;
+  pathImage: string;
+  baseDescription: string;
+  fullDescription: string;
+  products: BurgerInterface[];
 }
