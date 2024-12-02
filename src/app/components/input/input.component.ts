@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 import {
   FormsModule,
   FormBuilder,
@@ -8,11 +9,11 @@ import {
   Validators,
   ReactiveFormsModule,
 } from '@angular/forms';
-import { OrderInterface } from '../../interfaces/order-interface';
 import { HotToastService } from '@ngxpert/hot-toast';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../../components/button/button.component';
 import { ApiService } from '../../services/api.service';
+import { BurgerInterface } from '../../interfaces/burger-interface';
 
 @Component({
   selector: 'app-input',
@@ -24,6 +25,7 @@ import { ApiService } from '../../services/api.service';
     ReactiveFormsModule,
     CommonModule,
     ButtonComponent,
+    MatSelectModule,
   ],
   templateUrl: './input.component.html',
   styleUrl: './input.component.css',
@@ -31,45 +33,70 @@ import { ApiService } from '../../services/api.service';
 export class InputComponent {
   private toast: HotToastService = inject(HotToastService);
   burgerForm: FormGroup;
-  formValues: OrderInterface;
-  apiService: ApiService = inject(ApiService);
+  burgers: BurgerInterface[] = [];
 
-  constructor(private formBuilder: FormBuilder) {
-    // Inicializa o formulário
-    this.formValues = {} as OrderInterface;
-
-    // Cria e valida o formulário
+  constructor(
+    private formBuilder: FormBuilder,
+    private apiService: ApiService
+  ) {
+    // Inicializa e valida o formulário
     this.burgerForm = this.formBuilder.group({
-      burger1: this.formBuilder.group({
-        name: ['', Validators.required],
-        quantity: [
-          '',
-          [Validators.min(1), Validators.max(99), Validators.required],
-        ],
+      product1: this.formBuilder.group({
+        productId: [null, Validators.required],
+        quantity: [1, [Validators.required, Validators.min(1)]],
       }),
-      burger2: this.formBuilder.group({
-        name: ['', Validators.required],
-        quantity: [
-          '',
-          [Validators.min(1), Validators.max(99), Validators.required],
-        ],
+      product2: this.formBuilder.group({
+        productId: [null, Validators.required],
+        quantity: [1, [Validators.required, Validators.min(1)]],
       }),
       observation: ['', Validators.required],
+      value: [{ value: 0, disabled: true }],
+    });
+
+    // Retorna todos os produtos
+    this.apiService.getProducts().subscribe((burgers) => {
+      this.burgers = burgers;
+      this.setupValueCalculation();
+    });
+  }
+
+  // Configura o cálculo automático do valor total
+  setupValueCalculation(): void {
+    this.burgerForm.valueChanges.subscribe(() => {
+      const formValue = this.burgerForm.value;
+
+      // Obtém os preços dos produtos selecionados
+      const product1 = this.burgers.find(
+        (burger) => burger.id === formValue.product1?.productId
+      );
+      const product2 = this.burgers.find(
+        (burger) => burger.id === formValue.product2?.productId
+      );
+
+      // Calcula o valor total
+      const totalValue =
+        (product1?.price || 0) * (formValue.product1?.quantity || 0) +
+        (product2?.price || 0) * (formValue.product2?.quantity || 0);
+
+      // Atualiza o campo `value` no formulário
+      this.burgerForm.patchValue({ value: totalValue }, { emitEvent: false });
     });
   }
 
   // Função para criar um novo pedido, exibir um toast de sucesso ou erro e limpar o formulário
   createOrder(): void {
-    const randomId = Math.floor(Math.random() * 1000).toString();
-
     if (this.burgerForm.valid) {
-      this.formValues = {
-        id: randomId,
-        ...this.burgerForm.value,
+      const formValue = this.burgerForm.getRawValue(); // Inclui valores desabilitados
+      const order = {
+        status: 1, // Mockado (1 = Pedido em andamento)
+        userOrders: [{ userId: 1 }], // Mockado (1 = Usuário logado)
+        productOrders: [formValue.product1, formValue.product2],
+        observation: formValue.observation,
+        value: formValue.value,
       };
-      // this.burgersService.createOrder(this.formValues);
+
+      this.apiService.createOrder(order);
       this.toast.success('Pedido criado com sucesso');
-      this.formValues = {} as OrderInterface;
       this.burgerForm.reset();
     } else {
       this.toast.error('Formulário inválido');

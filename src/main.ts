@@ -5,7 +5,7 @@ import { provideHotToastConfig } from '@ngxpert/hot-toast';
 import { provideHttpClient } from '@angular/common/http';
 
 bootstrapApplication(AppComponent, {
-  // Configuração do HotToast para a aplicação inteira (global)
+  // Configuração do HotToast e do HttpClient para a aplicação inteira (global)
   providers: [
     provideHotToastConfig(),
     provideHttpClient(),

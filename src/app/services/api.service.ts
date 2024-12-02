@@ -5,6 +5,7 @@ import { map } from 'rxjs/operators';
 import { BurgerInterface } from '../interfaces/burger-interface';
 import { CategoryInterface } from '../interfaces/category-interface';
 import { environment } from '../environments/environment';
+import { OrderInterface } from '../interfaces/order-interface';
 
 @Injectable({
   providedIn: 'root',
@@ -18,7 +19,7 @@ export class ApiService {
   public getProducts(): Observable<BurgerInterface[]> {
     return this.http
       .get<{ message: string; products: BurgerInterface[] }>(
-        `${this.baseUrl}/products`
+        `${this.baseUrl}/product`
       )
       .pipe(map((response) => response.products));
   }
@@ -48,5 +49,15 @@ export class ApiService {
         `${this.baseUrl}/category/${id}`
       )
       .pipe(map((response) => response.category));
+  }
+
+  // Rota para criar um pedido
+  public createOrder(order: OrderInterface): Observable<OrderInterface> {
+    return this.http
+      .post<{ message: string; order: OrderInterface }>(
+        `${this.baseUrl}/order`,
+        order
+      )
+      .pipe(map((response) => response.order));
   }
 }

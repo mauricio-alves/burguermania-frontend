@@ -1,12 +1,12 @@
 export interface OrderInterface {
-  id: string;
-  burger1: {
-    name: string;
-    quantity: number;
-  };
-  burger2: {
-    name: string;
-    quantity: number;
-  };
+  status: number;
+  value: number;
   observation: string;
+  productOrders: {
+    productId: number;
+    quantity: number;
+  }[];
+  userOrders: {
+    userId: number;
+  }[];
 }
