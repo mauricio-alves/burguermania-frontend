@@ -88,13 +88,12 @@ export class InputComponent {
     if (this.burgerForm.valid) {
       const formValue = this.burgerForm.getRawValue(); // Inclui valores desabilitados
       const order = {
-        status: 1, // Mockado (1 = Pedido em andamento)
+        statusId: 1, // Mockado (1 = Pedido em andamento)
         userOrders: [{ userId: 1 }], // Mockado (1 = Usuário logado)
         productOrders: [formValue.product1, formValue.product2],
         observation: formValue.observation,
         value: formValue.value,
       };
-
       this.apiService.createOrder(order);
       this.toast.success('Pedido criado com sucesso');
       this.burgerForm.reset();

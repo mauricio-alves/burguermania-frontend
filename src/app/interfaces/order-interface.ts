@@ -1,5 +1,5 @@
 export interface OrderInterface {
-  status: number;
+  statusId: number;
   value: number;
   observation: string;
   productOrders: {

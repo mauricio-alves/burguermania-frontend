@@ -52,7 +52,7 @@ export class ApiService {
   }
 
   // Rota para criar um pedido
-  public createOrder(order: OrderInterface): Observable<OrderInterface> {
+  public createOrder(order: any): Observable<OrderInterface> {
     return this.http
       .post<{ message: string; order: OrderInterface }>(
         `${this.baseUrl}/order`,
