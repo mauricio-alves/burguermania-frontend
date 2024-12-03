@@ -2,7 +2,7 @@
 
 ## Descrição do projeto
 
-O objetivo é desenvolver o frontend da aplicação fullstack final da trilha, utilizando o framework Angular e seguindo o design fornecido no [Figma](https://www.figma.com/design/19zdCtwsVlhf1qkUmJWIaC/BurguerMania-(Copy)?node-id=1-2&node-type=canvas&t=AibeVoU3oEk7Uvs0-0). O projeto deve ser totalmente responsivo, funcionalmente intuitivo e seguir fielmente o layout proposto. É essencial que o frontend seja dividido em componentes para garantir sua reutilização em diferentes telas. Além disso, deve incluir funcionalidades dinâmicas, como formulários e navegação, além da utilização do Angular Material e do json-server para simular a troca de dados com uma api, o que será substituído no futuro pelo backend desse projeto.
+O objetivo é desenvolver o frontend da aplicação fullstack final da trilha, utilizando o framework Angular e seguindo o design fornecido no [Figma](https://www.figma.com/design/19zdCtwsVlhf1qkUmJWIaC/BurguerMania-(Copy)?node-id=1-2&node-type=canvas&t=AibeVoU3oEk7Uvs0-0). O projeto deve ser totalmente responsivo, funcionalmente intuitivo e seguir fielmente o layout proposto. É essencial que o frontend seja dividido em componentes para garantir sua reutilização em diferentes telas. Além disso, deve incluir funcionalidades dinâmicas, como formulários e navegação, além da utilização do Angular Material e do backend desse projeto que se encontra [aqui](https://github.com/mauricio-alves/burguermania-backend).
 
 ## Requisitos
 
@@ -25,9 +25,8 @@ O objetivo é desenvolver o frontend da aplicação fullstack final da trilha, u
 1. Primeiro, clone este repositório;
 2. Abra com qualquer IDE;
 3. Abra o terminal e rode o comando `npm install`;
-4. Então, rode o comando `json-server db.json`;
-5. Em outro terminal, rode o comando `npm start`;
-6. Uma janela abrirá no seu navegador e a aplicação será executada.
+4. Em outro terminal, rode o comando `npm start`;
+5. Uma janela abrirá no seu navegador e a aplicação será executada.
 
 ## Tecnologias utilizadas
 
@@ -38,4 +37,3 @@ O objetivo é desenvolver o frontend da aplicação fullstack final da trilha, u
 - Angular;
 - [Angular Hot Toast](https://ngxpert.github.io/hot-toast/);
 - [Angular Material](https://material.angular.io/);
-- [JSON Server](https://www.npmjs.com/package/json-server);
