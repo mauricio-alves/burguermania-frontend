@@ -5,7 +5,6 @@ import { map } from 'rxjs/operators';
 import { BurgerInterface } from '../interfaces/burger-interface';
 import { CategoryInterface } from '../interfaces/category-interface';
 import { environment } from '../environments/environment';
-import { OrderInterface } from '../interfaces/order-interface';
 
 @Injectable({
   providedIn: 'root',
@@ -52,12 +51,13 @@ export class ApiService {
   }
 
   // Rota para criar um pedido
-  public createOrder(order: any): Observable<OrderInterface> {
-    return this.http
-      .post<{ message: string; order: OrderInterface }>(
-        `${this.baseUrl}/order`,
-        order
-      )
-      .pipe(map((response) => response.order));
+  async createOrder(order: any): Promise<void> {
+    await fetch(`${this.baseUrl}/order`, {
+      method: 'POST',
+      body: JSON.stringify(order),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
   }
 }

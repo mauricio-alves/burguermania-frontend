@@ -78,28 +78,38 @@ export class InputComponent {
         (product1?.price || 0) * (formValue.product1?.quantity || 0) +
         (product2?.price || 0) * (formValue.product2?.quantity || 0);
 
+      // Formata o valor para exibição com 2 casas decimais
+      const formattedValue = Number(totalValue.toFixed(2));
+
       // Atualiza o campo `value` no formulário
-      this.burgerForm.patchValue({ value: totalValue }, { emitEvent: false });
+      this.burgerForm.patchValue(
+        { value: formattedValue },
+        { emitEvent: false }
+      );
     });
   }
 
   // Função para criar um novo pedido, exibir um toast de sucesso ou erro e limpar o formulário
-  createOrder(): void {
+  async submitOrder(): Promise<void> {
     if (this.burgerForm.valid) {
       const formValue = this.burgerForm.getRawValue(); // Inclui valores desabilitados
       const order = {
-        statusId: 1, // Mockado (1 = Pedido em andamento)
+        statusId: 1, // Mockado (1 = Pedido pendente)
         userOrders: [{ userId: 1 }], // Mockado (1 = Usuário logado)
         productOrders: [formValue.product1, formValue.product2],
         observation: formValue.observation,
         value: formValue.value,
       };
-      this.apiService.createOrder(order);
-      this.toast.success('Pedido criado com sucesso');
-      this.burgerForm.reset();
+      try {
+        await this.apiService.createOrder(order);
+        this.toast.success('Pedido criado com sucesso');
+        this.burgerForm.reset();
+      } catch (error) {
+        this.toast.error('Erro ao criar pedido');
+        console.error('Erro ao criar pedido', error);
+      }
     } else {
       this.toast.error('Formulário inválido');
-      this.burgerForm.reset();
     }
   }
 }
